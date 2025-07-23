@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class=" grid grid-cols-2 h-screen">
+
+    <div class="flex flex-col justify-center items-center space-y-2 bg-sky-200 ">
+        <h1 class="text-2xl mb-3">Palindrome String</h1>
+        <div class="flex  flex-col gap-2 items-center">
+            <input type="text" name="string" id="palindrome_input" value=""
+                placeholder="Enter String to Check Palindrome"
+                class="border-2 bg-white border-none rounded-md w-72 p-2" />
+            <button onclick="CheckPalindrome()" class="bg-slate-700 text-white p-2 border-none px-6 rounded-md mt-2">
+                Check Palindrome
+            </button>
+
+        </div>
+        <p id="palindrome_result" class="h-7"></p>
+    </div>
+    <div class="flex flex-col justify-center items-center space-y-2 bg-slate-900 space-y-3">
+        <h1 class="text-2xl mb-3 text-white">Anagrams String</h1>
+        <input type="text" name="string" id="anagram_str_1" value="" placeholder="Enter String 1"
+            class="border-2 bg-white border-none rounded-md w-72 p-2" />
+        <input type="text" name="string" id="anagram_str_2" value="" placeholder="Enter String 2"
+            class="border-2 bg-white border-none rounded-md w-72 p-2" />
+
+        <button onclick="checkAnagrams()"
+            class="bg-sky-200 text-black p-2 border-2 border-slate-700 px-6 rounded-md mt-5">
+            Check Anagrams
+        </button>
+
+        <p id="anagram_result" class="h-7"></p>
+    </div>
+    <script>
+
+        const CheckPalindrome = () => {
+            const text = document.getElementById("palindrome_input").value;
+            const result = document.getElementById("palindrome_result")
+            let i = 0;
+            let j = text.length - 1;
+
+            while (i < j) {
+                if (text.charAt(i) != text.charAt(j)) break;
+                i++;
+                j--;
+            }
+
+            if (i >= j) {
+                result.innerText = `${text} is a Palindrome String!`;
+                result.classList.add('text-green-400');
+            } else {
+                result.innerText = `${text} is not a Palindrome String!`;
+                result.classList.add('text-red-400');
+            }
+        }
+
+        const checkAnagrams = () => {
+            const text1 = document.getElementById("anagram_str_1").value;
+            const text2 = document.getElementById("anagram_str_2").value;
+            const result = document.getElementById("anagram_result")
+
+            if (text1.length != text2.length) {
+                result.innerText = `${text1} and ${text2} are not a Anagram String!`;
+                result.classList.add('text-red-500');
+                return ;
+            }
+
+            const text1Arr = text1.toLowerCase().split('').sort();
+            const text2Arr = text2.toLowerCase().split('').sort();
+
+            if (text1Arr.toString() == text2Arr.toString()) {
+                result.innerText = `${text1} and ${text2} are a Anagram String!`;
+                result.classList.add('text-green-500');
+            } else {
+                result.innerText = `${text1} and ${text2} are not a Anagram String!`;
+                result.classList.add('text-red-500');
+            }
+        }
+    </script>
+</body>
+
+</html>

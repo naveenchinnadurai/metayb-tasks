@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col items-center justify-center space-y-2 bg-slate-900 h-screen">
+    <h1 class="text-2xl text-white font-bold mb-2">Tic Tac Toe </h1>
+
+    <div class="grid grid-cols-3 bg-gray gap-0.5 text-2xl">
+        <button id="box-1" onclick="handleClick('box-1')" class="h-20 w-20 border-none bg-cyan-50"></button>
+        <button id="box-2" onclick="handleClick('box-2')" class="h-20 w-20 border-none bg-cyan-50"></button>
+        <button id="box-3" onclick="handleClick('box-3')" class="h-20 w-20 border-none bg-cyan-50"></button>
+        <button id="box-4" onclick="handleClick('box-4')" class="h-20 w-20 border-none bg-cyan-50"></button>
+        <button id="box-5" onclick="handleClick('box-5')" class="h-20 w-20 border-none bg-cyan-50"></button>
+        <button id="box-6" onclick="handleClick('box-6')" class="h-20 w-20 border-none bg-cyan-50"></button>
+        <button id="box-7" onclick="handleClick('box-7')" class="h-20 w-20 border-none bg-cyan-50"></button>
+        <button id="box-8" onclick="handleClick('box-8')" class="h-20 w-20 border-none bg-cyan-50"></button>
+        <button id="box-9" onclick="handleClick('box-9')" class="h-20 w-20 border-none bg-cyan-50"></button>
+    </div>
+
+    <script>
+        let changePlayer = true;
+
+        const handleClick = (id) => {
+
+            const box = document.getElementById(id);
+
+            if (box.innerText == '') {
+                if (changePlayer) {
+                    box.innerText = 'X';
+                } else {
+                    box.innerText = 'O';
+                }
+                changePlayer = !changePlayer;
+            }
+        }
+    </script>
+</body>
+
+</html>

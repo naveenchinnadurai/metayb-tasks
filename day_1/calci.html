@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calci</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .btn {
+            height: 55px;
+            width: 55px;
+            background-color: rgb(206, 216, 221);
+            border-radius: 50px;
+        }
+
+        #display {
+            background-color: #dff0ff;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+    <h1 class="text-3xl font-bold mb-6">Calculator</h1>
+
+    <div class="flex flex-col items-center space-y-2">
+        <div id="display"
+            class="w-full max-w-xs h-16 border border-gray-400 rounded text-right text-3xl px-4 flex items-center justify-end mb-3">
+        </div>
+
+        <div class="flex space-x-2">
+            <button value="All Clear" onclick="clearAll()" class="btn w-[120px] text-md">All Clear</button>
+            <button value="Backspace" onclick="backspace()" class="btn">&larr;</button>
+            <button value="+" onclick="handleClick('+')" class="btn">+</button>
+        </div>
+        <div class="flex space-x-2">
+            <button value="7" onclick="handleClick('7')" class="btn">7</button>
+            <button value="8" onclick="handleClick('8')" class="btn">8</button>
+            <button value="9" onclick="handleClick('9')" class="btn">9</button>
+            <button value="+" onclick="handleClick('-')" class="btn">-</button>
+        </div>
+        <div class="flex space-x-2">
+            <button value="4" onclick="handleClick('4')" class="btn">4</button>
+            <button value="5" onclick="handleClick('5')" class="btn">5</button>
+            <button value="6" onclick="handleClick('6')" class="btn">6</button>
+            <button value="-" onclick="handleClick('*')" class="btn">x</button>
+        </div>
+        <div class="flex space-x-2">
+            <button value="1" onclick="handleClick('1')" class="btn">1</button>
+            <button value="2" onclick="handleClick('2')" class="btn">2</button>
+            <button value="3" onclick="handleClick('3')" class="btn">3</button>
+            <button value="*" onclick="handleClick('/')" class="btn">/</button>
+        </div>
+        <div class="flex space-x-2">
+            <button value="." onclick="handleClick('.')" class="btn">.</button>
+            <button value="0" onclick="handleClick('0')" class="btn">0</button>
+            <button value="=" onclick="handleClick('=')" class="btn w-[120px]">=</button>
+        </div>
+    </div>
+    <script>
+
+        const display = document.getElementById("display");
+
+        function handleClick(value) {
+
+            if (value == "=") {
+                try {
+                    display.textContent = eval(display.textContent);
+                } catch {
+                    display.textContent = "Invalid Expression";
+                }
+            } else {
+                display.textContent += value;
+            }
+        }
+
+        const backspace = () => {
+            display.textContent = display.textContent.slice(0, display.textContent.length - 1)
+        }
+
+        const clearAll = () => display.textContent = '';
+    </script>
+</body>
+
+</html>
