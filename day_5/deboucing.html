@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debouncing</title>
+</head>
+
+<body>
+    <input type="text" id="search" placeholder="Type to search..." />
+
+    <p id="context"></p>
+
+    <script>
+        function handleInput(event) {
+            document.getElementById('context').innerText = `Searching for: ${event.target.value}`;
+            console.log("Searching for:", event.target.value);
+        }
+
+        const debouncedInput = debounce(handleInput, 800);
+
+        document.getElementById("search").addEventListener("input", debouncedInput);
+
+
+        function debounce(fn, delay) {
+            let timer;
+            return function (...args) {
+                console.log(args);
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+                    console.log(this);
+                    fn.apply(this, args);
+                }, delay);
+            };
+        }
+
+    </script>
+</body>
+
+</html>
