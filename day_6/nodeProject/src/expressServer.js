@@ -1,10 +1,12 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser'
 
 import swaggerUi from 'swagger-ui-express';
 import swaggerJSDoc from 'swagger-jsdoc';
 import { swaggerOptions } from './docs/swaggerOptions.js';
 
+import authRoutes from './routes/auth.routes.js';
 import userRoutes from './routes/user.routes.js';
 
 import { logRoutes, timeStampLogger } from './middleware/logRoutes.js';
@@ -20,18 +22,8 @@ server.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 const PORT = process.env.PORT || 3000;
 
 server.use(express.json())
-
+server.use(cookieParser())
 server.use(timeStampLogger)
-
-/**
- * @swagger
- * /:
- *   get:
- *     summary: Test route to check server
- *     responses:
- *       200:
- *         description: A Sample message
- */
 
 server.get('/', (req, res) => {
     res.json({
@@ -49,6 +41,7 @@ server.get('/hello', (req, res) => {
     })
 })
 
+server.use('/auth', authRoutes);
 server.use('/user', userRoutes);
 
 server.use((req, res) => {

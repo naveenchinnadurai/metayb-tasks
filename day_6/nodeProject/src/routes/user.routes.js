@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { User } from "../db/user.js";
-import { timeStampLogger } from "../middleware/logRoutes.js";
+import { authorizeUser } from "../middleware/authorizeUser.js";
 
 const routes = Router();
 
@@ -65,7 +65,7 @@ routes.get('/search', (req, res) => {
 });
 
 
-routes.post('/', (req, res) => {
+routes.post('/', authorizeUser, (req, res) => {
     const { name, role, YOB, email } = req.body;
 
     if (!name || !role || !YOB || !email) {
@@ -77,8 +77,7 @@ routes.post('/', (req, res) => {
 
     let user = User.find((e) => e.email == email);
 
-    if (!user) {
-        console.log(user)
+    if (user) {
         res.status(400).json({
             error: `User with this email id ${email} already exist!`
         })

@@ -14,7 +14,8 @@ export const swaggerOptions = {
         ],
     },
     apis: [
-        './src/docs/userRoutesDocs.js',
-        './src/docs/rootRoutesDocs.js'
+        './src/docs/user.route.docs.js',
+        './src/docs/root.route.docs.js',
+        './src/docs/auth.route.docs.js'
     ],
 };
