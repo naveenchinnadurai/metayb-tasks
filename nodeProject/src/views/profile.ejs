@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center h-screen bg-black">
+
+    <div class="flex justify-center items-center space-x-2 h-fit bg-slate-700 text-white p-5 rounded-xl">
+        <div class="h-24 w-24 bg-slate-400 rounded-full"></div>
+        <div class="flex flex-col justify-center">
+            <div class="flex items-center space-x-2">
+                <h1 class="text-2xl font-bold">
+                    <%= name %>
+                </h1>
+                <h1 class="text-xl font-semibold">
+                    (<%= role %>)
+                </h1>
+            </div>
+            <h1 class="text-xl font-semibold">
+                Email: <%= email %>
+            </h1>
+            <h1 class="text-xl font-semibold">
+                Year of Birth: <%= YOB %>
+            </h1>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
