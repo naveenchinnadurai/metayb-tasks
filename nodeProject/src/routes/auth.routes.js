@@ -7,5 +7,6 @@ const routes = Router();
 routes.get('/', authRouteCheck)
 
 routes.post('/login', login)
+routes.get('/login', login)
 
 export default routes;

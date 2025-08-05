@@ -185,7 +185,7 @@ export const patchUserData = async (req, res) => {
 
 export const deleteUser = async (req, res) => {
     const { id } = req.params;
-
+    
     if (!id) {
         return res.status(400).json({
             error: "No userId"
