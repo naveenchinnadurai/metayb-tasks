@@ -44,7 +44,7 @@ export const LeavesByEmployeeId = async (req, res) => {
     try {
         const leaves = await Leave.findAll({ where: { employee_id: id } });
 
-        if (leaves) {
+        if (!leaves) {
             return res.status(204).json({
                 message: "No leave Data Found"
             })

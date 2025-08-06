@@ -178,7 +178,17 @@ export const deleteEmployee = async (req, res) => {
 
     try {
         const employee = await Employee.findByPk(employeeToDelete);
+
+        if (!employee) {
+            return res.status(404).json({
+                error: "Employee not found"
+            })
+        }
         employee.destroy();
+
+        res.status(200).json({
+            message: "Employee Deleted Successfull"
+        })
     } catch (err) {
         return res.status(403).json({
             error: "Error Deleting EmployeeF",
