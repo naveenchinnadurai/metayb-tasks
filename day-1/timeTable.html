@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen bg-gray-100 flex flex-col items-center justify-center">
+
+    <h1 class="text-3xl font-bold mb-6">Weekly Learning Time Table</h1>
+
+    <div class="overflow-x-auto w-4/5">
+        <table class="table-fixed border border-gray-500 w-full text-center">
+            <thead class="bg-gray-300">
+                <tr>
+                    <th class="border border-gray-500 px-4 py-5">Time & Day</th>
+                    <th class="border border-gray-500 px-4 py-5">10AM to 11AM</th>
+                    <th class="border border-gray-500 px-4 py-5">11AM to 12PM</th>
+                    <th class="border border-gray-500 px-2 py-2 !w-32">12PM to 2PM</th>
+                    <th class="border border-gray-500 px-4 py-5">2PM to 3PM</th>
+                    <th class="border border-gray-500 px-4 py-5">3PM to 4PM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="border border-gray-500 px-4 py-5 bg-gray-400/10">Monday</th>
+                    <td class="border border-gray-500 px-4 py-5">Frontend</td>
+                    <td class="border border-gray-500 px-4 py-5">Backend</td>
+                    <td class="border border-gray-500 px-2 py-2 transform -rotate-90 whitespace-nowrap text-2xl" rowspan="5"> Lunch Break</td>
+                    <td class="border border-gray-500 px-4 py-5">Analystics</td>
+                    <td class="border border-gray-500 px-4 py-5">SQL</td>
+                </tr>
+                <tr>
+                    <th class="border border-gray-500 px-4 py-5 bg-gray-400/10">Tuesday</th>
+                    <td class="border border-gray-500 px-4 py-5">MongoDB</td>
+                    <td class="border border-gray-500 px-4 py-5">SQL</td>
+                    <td class="border border-gray-500 px-4 py-5">DBMS</td>
+                    <td class="border border-gray-500 px-4 py-5">Fun Play</td>
+                </tr>
+                <tr>
+                    <th class="border border-gray-500 px-4 py-5 bg-gray-400/10">Wednesday</th>
+                    <td class="border border-gray-500 px-4 py-5">Postgresql</td>
+                    <td class="border border-gray-500 px-4 py-5">ORM</td>
+                    <td class="border border-gray-500 px-4 py-5">Frontend</td>
+                    <td class="border border-gray-500 px-4 py-5">UI/UX</td>
+                </tr>
+                <tr>
+                    <th class="border border-gray-500 px-4 py-5 bg-gray-400/10">Thursday</th>
+                    <td class="border border-gray-500 px-4 py-5">Backend</td>
+                    <td class="border border-gray-500 px-4 py-5">SQL</td>
+                    <td class="border border-gray-500 px-4 py-5">UI/UX</td>
+                    <td class="border border-gray-500 px-4 py-5">Leadership</td>
+                </tr>
+                <tr>
+                    <th class="border border-gray-500 px-4 py-5 bg-gray-400/10">Friday</th>
+                    <td class="border border-gray-500 px-4 py-5">Backend</td>
+                    <td class="border border-gray-500 px-4 py-5">UI/UX</td>
+                    <td class="border border-gray-500 px-4 py-5">Frontend</td>
+                    <td class="border border-gray-500 px-4 py-5">Fun Play</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

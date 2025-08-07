@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveen Chinnadurai Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-5">
+    <header class="p-2 flex flex-col justify-center items-center">
+        <h1 class="text-3xl font-bold">Naveen Chinnadurai</h1>
+        <h2 class="text-2xl font-medium">Software Developer</h2>
+
+        <ul class="text-lg text-center">
+            Ariyalur, Tamilnadu | dev.iamnaveen@gmail.com | (+91) 8098150750
+        </ul>
+        <h3 class="text-lg">
+            <a href="https://www.linkedin.com/in/naveen-chinnadurai/" class="underline">LinkedIn</a> |
+            <a href="https://www.linkedin.com/in/naveen-chinnadurai/" class="underline">GitHub</a> |
+            <a href="https://naveen-chinnadurai-portfolio.vercel.app/" class="underline">Portfolio</a>
+        </h3>
+    </header>
+    <div class="flex flex-col">
+        <h3 class="text-xl border-b-2 border-black font-bold">SKILLS</h3>
+        <ul class="text-lg flex flex-col justify-center space-y-0.5">
+            <li>
+                <b>Programming Languages:</b> C, C++, Core Java, Python, JavaScript, TypeScript, HTML, CSS.
+            </li>
+            <li>
+                <b>Frameworks & Libraries:</b> Node.js, React, React Native, Next.js, TailwindCSS, Bootstrap, Shadecn
+                UI,
+                MaterialUI
+            </li>
+            <li>
+                <b>Databases :</b> SQL, SQLite, MySQL, PostgreSQL, Supabase.
+            </li>
+            <li>
+                <b>Tools:</b> Git, GitHub, IntelliJ IDEA, Postman, Figma, DrizzleORM, .
+            </li>
+            <li>
+                <b>Core Concepts:</b> Data Structures and Algorithms, Object-Oriented Programming (OOP), Agile
+                Methodologies.
+            </li>
+        </ul>
+    </div>
+    <div class="flex flex-col">
+        <h3 class="text-xl border-b-2 border-black font-bold">EDUCATION</h3>
+        <div class="flex justify-between text-lg">
+            <p>
+                Sengunthar Engineering College,<br>
+                B.E. Computer Science & Engineering with Honours in AI & ML
+            </p>
+            <p class="text-right">Tiruchengode, Tamilnadu<br>
+                May 2025
+            </p>
+        </div>
+        <ul class="text-lg list-disc ps-10">
+            <li> <strong>CGPA:</strong> 8.3</li>
+            <li>
+                <strong>Related Coursework:</strong> Data Structures & Algorithms, Objects & Design, Computer
+                Organization & Programming,
+                Machine Learning, Artificial Intelligence, Object-Oriented Programming, Statistics & Applications.
+            </li>
+        </ul>
+    </div>
+    <div class="flex flex-col">
+        <h3 class="text-xl border-b-2 border-black font-bold">PROJECTS</h3>
+        <div id="project-section"></div>
+    </div>
+    <div class="flex flex-col">
+        <h3 class="text-xl border-b-2 border-black font-bold">CERTIFICATIONS</h3>
+        <div id="certifications-section" class="flex flex-wrap justify-between space-y-2"></div>
+    </div>
+    <div class="flex flex-col">
+        <h3 class="text-xl border-b-2 border-black font-bold">ACHIEVEMENTS</h3>
+        <ul class="text-lg list-disc ps-10">
+            <li>Actively participated in College Symposiums and Events, earning awards for securing 1st, 2nd, and 3rd
+                positions in various categories such as Paper Presentations, Coding Competitions, and Web Development
+                Challenges.
+            </li>
+            <li>Successfully passed the HackerRank skill test for the React Frontend Developer domain.</li>
+        </ul>
+    </div>
+    <script>
+        const projects = [
+            {
+                title: "College Dues Off",
+                link: 'https://github.com/naveenchinnadurai/college-dues-off',
+                techStack: ["React Native", "TypeScript", "NativeWind", "Node.js", "PostgreSQL"],
+                date: "May 2025",
+                description: [
+                    "Designed a mobile application to streamline college processes, enabling students to track dues, access internal marks, download mark-sheets, request for bonafide certificate, on duty permissions and no dues efficiently.",
+                    "Empowered staff with tools to manage subject marks, update student records, and handle administrative tasks, enhancing accuracy and operational productivity."
+                ]
+            },
+            {
+                title: "Job Board",
+                link: 'https://github.com/naveenchinnadurai/job_board',
+                techStack: ["React", "TypeScript", "Tailwind", "Node.js", "PostgreSQL"],
+                date: "June 2024",
+                description: [
+                    "Developed a comprehensive full stack application that streamlines the job search and hiring process for both job seekers and employers.",
+                    "The application enables employees to search and apply for jobs, while allowing employers to post job openings and manage applications."
+                ]
+            },
+            {
+                title: "Book Store Web App",
+                link: 'https://github.com/naveenchinnadurai/bookstore-react-web',
+                techStack: ["React", "TypeScript", "Tailwind", "Supabase"],
+                date: "March 2024",
+                description: [
+                    "Developed a multipage website that uses Google Books API to display the book requested by the user.",
+                    "Designed a user-friendly interface that fetches and displays book details such as author, average rating, price, and official purchase links, allowing seamless navigation to the product page."
+                ]
+            },
+            {
+                title: "Travel Website",
+                link: 'https://github.com/naveenchinnadurai/Travor_Zween-Travel-web',
+                techStack: ["React", "Tailwind", "JavaScript"],
+                date: "January 2024",
+                description: [
+                    "Built a responsive and interactive website to effectively showcase the travel agency's services.",
+                    "Crafted a multipage website with an aesthetically pleasing user interface and robust functionality, including a dedicated page for over 10 tourist destinations, categorized sections, and detailed offers."
+                ]
+            },
+            {
+                title: "CGPA Calculator Web",
+                link: 'https://github.com/naveenchinnadurai/Travor_Zween-Travel-web',
+                techStack: ["Next.js", "Tailwind", "TypeScript", "Shadcn-UI"],
+                date: "June 2024",
+                description: [
+                    "Developed a dynamic CGPA calculator adhering to Anna University's grading methodology, enabling accurate semester-wise and cumulative performance tracking for students.",
+                    "Implemented efficient algorithms and an intuitive user interface to streamline grade calculations from semester 1 to 8 (Engineering), enhancing usability and academic transparency."
+                ]
+            }
+        ];
+
+        const certifications = [
+            {
+                title: "Core Java Specialization",
+                provider: "Learn Quest (Coursera)",
+                date: "Dec 2023"
+            },
+            {
+                title: "Front-End Development Libraries",
+                provider: "Free Code Camp",
+                date: "Dec 2023"
+            },
+            {
+                title: "JavaScript Foundation",
+                provider: "Udemy",
+                date: "July 2024"
+            },
+            {
+                title: "Agile Methodology",
+                provider: "Infosys Springboard",
+                date: "June 2025"
+            },
+            {
+                title: "Google AI Essentials",
+                provider: "Google (Coursera)",
+                date: "June 2024"
+            },
+            {
+                title: "AI Creation Studio",
+                provider: "Yugam",
+                date: "March 2023"
+            },
+            {
+                title: "Python Essentials",
+                provider: "Kaggle",
+                date: "October 2022"
+            },
+            {
+                title: "Front-End Development Libraries",
+                provider: "Free Code Camp",
+                date: "Dec 2023"
+            }
+        ];
+
+
+        const projectsSection = document.getElementById('project-section');
+        const certificationSection = document.getElementById('certifications-section');
+
+        projects.forEach(project => {
+            const card = `
+            <div class="mb-2">
+                <div class="flex justify-between">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <a href=${project.link} class="text-lg font-medium underline underline-offset-2">${project.title}</a> –
+                        <p class="text-md text-gray-400"><i>${project.techStack.join(" | ")}</i></p>
+                    </div>
+                    <div class="text-lg font-semibold">${project.date}</div>
+                </div>
+
+                <ul class="text-lg list-disc ps-10">
+                    ${project.description.map(item => `<li>${item}</li>`).join("")}
+                </ul>
+            </div>
+        `
+            projectsSection.innerHTML += card;
+        });
+
+        certifications.forEach(certificate => {
+            const card = `
+            <div class="flex flex-col w-1/4">
+                <h3 class="text-lg font-semibold underline">${certificate.title}</h3>
+                <h4 class="text-md">${certificate.provider} – ${certificate.date}</h4>
+            </div>
+        `
+            certificationSection.innerHTML += card;
+        });
+
+
+
+    </script>
+</body>
+
+</html>
