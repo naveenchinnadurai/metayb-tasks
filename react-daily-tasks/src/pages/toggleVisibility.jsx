@@ -13,7 +13,7 @@ function ToggleVisibility() {
           Toggle
         </CustomButton>
         {displayData && (
-          <h1 className="text-2xl font-medium">Text is displayed!</h1>
+          <h1 className="text-2xl font-medium mt-5">Text is displayed!</h1>
         )}
       </div>
     </div>
