@@ -1,19 +1,20 @@
+import { ThemeProvider } from "@emotion/react";
 import { Route, Routes } from "react-router";
 import "./App.css";
+import AccordionPractice from "./pages/accordion";
+import CharacterCounter from "./pages/characterCounter";
 import Count from "./pages/count";
-import Home from "./pages/home";
+import DashboardLayout from "./pages/dashBoard";
+import DisplayUser from "./pages/displayUser";
+import FeedbackForm from "./pages/feedback";
 import Greetings from "./pages/greetings";
-import ToggleVisibility from "./pages/toggleVisibility";
+import Home from "./pages/home";
 import Login from "./pages/login";
 import ProductDisplay from "./pages/productDisplay";
-import { ThemeProvider } from "@emotion/react";
-import newTheme from "./themes/newTheme";
-import DashboardLayout from "./pages/dashBoard";
-import AccordionPractice from "./pages/accordion";
-import Todo from "./pages/todo";
-import Search from "./pages/search";
 import Signup from "./pages/signup";
-import FeedbackForm from "./pages/feedback";
+import Todo from "./pages/todo";
+import ToggleVisibility from "./pages/toggleVisibility";
+import newTheme from "./themes/newTheme";
 function App() {
   return (
     <div className="h-screen">
@@ -34,9 +35,10 @@ function App() {
         <Route path="/dashboard" element={<DashboardLayout />} />
         <Route path="/accordion" element={<AccordionPractice />} />
         <Route path="/todo" element={<Todo />} />
-        <Route path="/search" element={<Search />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/feedback" element={<FeedbackForm />} />
+        <Route path="/display-user" element={<DisplayUser />} />
+        <Route path="/count-character" element={<CharacterCounter />} />
       </Routes>
     </div>
   );

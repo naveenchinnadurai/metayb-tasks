@@ -81,22 +81,35 @@ function Home() {
           </Typography>
           <div className="flex justify-center flex-wrap gap-5">
             <Link
-              to="/search"
-              className="bg-slate-800 px-8 py-3 text-white rounded-md w-48 text-center"
-            >
-              Search
-            </Link>
-            <Link
               to="/Signup"
-              className="bg-slate-800 px-8 py-3 text-white rounded-md w-48 text-center"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md w-72 text-center"
             >
               Signup
             </Link>
             <Link
               to="/feedback"
-              className="bg-slate-800 px-8 py-3 text-white rounded-md w-48 text-center"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md w-72 text-center"
             >
               Feedback
+            </Link>
+          </div>
+        </div>
+        <div>
+          <Typography variant="h5" color="white" marginBottom={1}>
+            Day 6
+          </Typography>
+          <div className="flex justify-center flex-wrap gap-5">
+            <Link
+              to="/display-user"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md w-48 text-center"
+            >
+              Fetching API
+            </Link>
+            <Link
+              to="/count-character"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md w-72 text-center"
+            >
+              Count Character and factorial
             </Link>
           </div>
         </div>
