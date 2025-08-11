@@ -75,6 +75,31 @@ function Home() {
             </Link>
           </div>
         </div>
+        <div>
+          <Typography variant="h5" color="white" marginBottom={1}>
+            Day 5
+          </Typography>
+          <div className="flex justify-center flex-wrap gap-5">
+            <Link
+              to="/search"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md w-48 text-center"
+            >
+              Search
+            </Link>
+            <Link
+              to="/Signup"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md w-48 text-center"
+            >
+              Signup
+            </Link>
+            <Link
+              to="/feedback"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md w-48 text-center"
+            >
+              Feedback
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

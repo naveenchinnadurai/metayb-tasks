@@ -11,6 +11,9 @@ import newTheme from "./themes/newTheme";
 import DashboardLayout from "./pages/dashBoard";
 import AccordionPractice from "./pages/accordion";
 import Todo from "./pages/todo";
+import Search from "./pages/search";
+import Signup from "./pages/signup";
+import FeedbackForm from "./pages/feedback";
 function App() {
   return (
     <div className="h-screen">
@@ -31,6 +34,9 @@ function App() {
         <Route path="/dashboard" element={<DashboardLayout />} />
         <Route path="/accordion" element={<AccordionPractice />} />
         <Route path="/todo" element={<Todo />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/feedback" element={<FeedbackForm />} />
       </Routes>
     </div>
   );
