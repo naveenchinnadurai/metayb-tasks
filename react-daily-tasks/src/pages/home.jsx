@@ -113,6 +113,19 @@ function Home() {
             </Link>
           </div>
         </div>
+        <div>
+          <Typography variant="h5" color="white" marginBottom={1}>
+            Day 7
+          </Typography>
+          <div className="flex justify-center flex-wrap gap-5">
+            <Link
+              to="/e-commerce"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md w-full text-center"
+            >
+              Mini Project E-Commerce
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
