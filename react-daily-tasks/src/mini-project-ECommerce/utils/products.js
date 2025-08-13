@@ -1,7 +1,7 @@
 export const products = [
     {
         id: 1,
-        name: "Running Shoes",
+        title: "Running Shoes",
         price: 129.99,
         description: "Lightweight shoes with breathable mesh and cushioned soles for jogging and gym.",
         image: "https://source.unsplash.com/400x400/?running-shoes,sneakers",
@@ -9,7 +9,7 @@ export const products = [
     },
     {
         id: 2,
-        name: "Classic Watch",
+        title: "Classic Watch",
         price: 249.99,
         description: "Stainless steel, water-resistant wristwatch with chronograph features.",
         image: "https://source.unsplash.com/400x400/?watch,wristwatch",
@@ -17,7 +17,7 @@ export const products = [
     },
     {
         id: 3,
-        name: "Wireless Earbuds",
+        title: "Wireless Earbuds",
         price: 59.99,
         description: "Noise-cancelling earbuds with clear sound and long battery life.",
         image: "https://source.unsplash.com/400x400/?wireless-earbuds,earphones",
@@ -25,7 +25,7 @@ export const products = [
     },
     {
         id: 4,
-        name: "LED Desk Lamp",
+        title: "LED Desk Lamp",
         price: 39.99,
         description: "Adjustable brightness lamp with USB charging port.",
         image: "https://source.unsplash.com/400x400/?desk-lamp,lamp",
@@ -33,7 +33,7 @@ export const products = [
     },
     {
         id: 5,
-        name: "Office Chair",
+        title: "Office Chair",
         price: 199.99,
         description: "Ergonomic chair with lumbar support and adjustable armrests.",
         image: "https://source.unsplash.com/400x400/?office-chair,furniture",
@@ -41,7 +41,7 @@ export const products = [
     },
     {
         id: 6,
-        name: "4K Monitor",
+        title: "4K Monitor",
         price: 349.99,
         description: "27-inch 4K display with vibrant colors and ultra-thin bezel.",
         image: "https://source.unsplash.com/400x400/?computer-monitor,technology",
@@ -49,7 +49,7 @@ export const products = [
     },
     {
         id: 7,
-        name: "Casual Sneakers",
+        title: "Casual Sneakers",
         price: 89.99,
         description: "Comfortable sneakers for everyday wear.",
         image: "https://source.unsplash.com/400x400/?casual-sneakers,footwear",
@@ -57,7 +57,7 @@ export const products = [
     },
     {
         id: 8,
-        name: "Sports Watch",
+        title: "Sports Watch",
         price: 179.99,
         description: "Durable watch with stopwatch and water resistance.",
         image: "https://source.unsplash.com/400x400/?sports-watch,watch",
@@ -65,7 +65,7 @@ export const products = [
     },
     {
         id: 9,
-        name: "Gaming Headset",
+        title: "Gaming Headset",
         price: 79.99,
         description: "Surround sound headset with noise-cancelling mic.",
         image: "https://source.unsplash.com/400x400/?gaming-headset,headphones",
@@ -73,7 +73,7 @@ export const products = [
     },
     {
         id: 10,
-        name: "Smartphone Stand",
+        title: "Smartphone Stand",
         price: 15.99,
         description: "Adjustable phone holder for desk or nightstand.",
         image: "https://source.unsplash.com/400x400/?smartphone-stand,phone",
@@ -81,7 +81,7 @@ export const products = [
     },
     {
         id: 11,
-        name: "Wooden Bookshelf",
+        title: "Wooden Bookshelf",
         price: 129.99,
         description: "5-tier bookshelf made from solid wood.",
         image: "https://source.unsplash.com/400x400/?wooden-bookshelf,furniture",
@@ -89,7 +89,7 @@ export const products = [
     },
     {
         id: 12,
-        name: "Bluetooth Speaker",
+        title: "Bluetooth Speaker",
         price: 49.99,
         description: "Portable speaker with rich bass and long battery life.",
         image: "https://source.unsplash.com/400x400/?bluetooth-speaker,speaker",
@@ -97,7 +97,7 @@ export const products = [
     },
     {
         id: 13,
-        name: "Flip Flops",
+        title: "Flip Flops",
         price: 19.99,
         description: "Lightweight and comfortable beach flip flops.",
         image: "https://source.unsplash.com/400x400/?flip-flops,footwear",
@@ -105,7 +105,7 @@ export const products = [
     },
     {
         id: 14,
-        name: "Leather Wallet",
+        title: "Leather Wallet",
         price: 39.99,
         description: "Slim wallet made of genuine leather.",
         image: "https://source.unsplash.com/400x400/?leather-wallet,wallet",
@@ -113,7 +113,7 @@ export const products = [
     },
     {
         id: 15,
-        name: "Desk Organizer",
+        title: "Desk Organizer",
         price: 25.99,
         description: "Multi-compartment organizer for office supplies.",
         image: "https://source.unsplash.com/400x400/?desk-organizer,office",
@@ -121,7 +121,7 @@ export const products = [
     },
     {
         id: 16,
-        name: "Dining Chair",
+        title: "Dining Chair",
         price: 89.99,
         description: "Comfortable dining chair with cushioned seat.",
         image: "https://source.unsplash.com/400x400/?dining-chair,furniture",
@@ -129,7 +129,7 @@ export const products = [
     },
     {
         id: 17,
-        name: "Smartwatch",
+        title: "Smartwatch",
         price: 199.99,
         description: "Fitness smartwatch with heart rate monitor.",
         image: "https://source.unsplash.com/400x400/?smartwatch,fitness",
@@ -137,7 +137,7 @@ export const products = [
     },
     {
         id: 18,
-        name: "Trail Running Shoes",
+        title: "Trail Running Shoes",
         price: 139.99,
         description: "Durable shoes designed for trail running.",
         image: "https://source.unsplash.com/400x400/?trail-running-shoes,footwear",
@@ -145,7 +145,7 @@ export const products = [
     },
     {
         id: 19,
-        name: "Sunglasses",
+        title: "Sunglasses",
         price: 49.99,
         description: "UV-protective stylish sunglasses.",
         image: "https://source.unsplash.com/400x400/?sunglasses,accessories",
@@ -153,7 +153,7 @@ export const products = [
     },
     {
         id: 20,
-        name: "Floor Lamp",
+        title: "Floor Lamp",
         price: 69.99,
         description: "Modern floor lamp with adjustable brightness.",
         image: "https://source.unsplash.com/400x400/?floor-lamp,lamp",
@@ -161,7 +161,7 @@ export const products = [
     },
     {
         id: 21,
-        name: "Coffee Table",
+        title: "Coffee Table",
         price: 149.99,
         description: "Wooden coffee table with storage shelf.",
         image: "https://source.unsplash.com/400x400/?coffee-table,furniture",
@@ -169,7 +169,7 @@ export const products = [
     },
     {
         id: 22,
-        name: "Wireless Charger",
+        title: "Wireless Charger",
         price: 29.99,
         description: "Fast wireless charger compatible with most phones.",
         image: "https://source.unsplash.com/400x400/?wireless-charger,charger",
@@ -177,7 +177,7 @@ export const products = [
     },
     {
         id: 23,
-        name: "Hiking Boots",
+        title: "Hiking Boots",
         price: 159.99,
         description: "Waterproof boots designed for hiking trails.",
         image: "https://source.unsplash.com/400x400/?hiking-boots,boots",
@@ -185,7 +185,7 @@ export const products = [
     },
     {
         id: 24,
-        name: "Backpack",
+        title: "Backpack",
         price: 69.99,
         description: "Durable backpack with multiple compartments.",
         image: "https://source.unsplash.com/400x400/?backpack,bag",
@@ -193,7 +193,7 @@ export const products = [
     },
     {
         id: 25,
-        name: "Wall Clock",
+        title: "Wall Clock",
         price: 29.99,
         description: "Silent wall clock with modern design.",
         image: "https://source.unsplash.com/400x400/?wall-clock,clock",
@@ -201,7 +201,7 @@ export const products = [
     },
     {
         id: 26,
-        name: "Recliner Chair",
+        title: "Recliner Chair",
         price: 299.99,
         description: "Comfortable recliner with adjustable settings.",
         image: "https://source.unsplash.com/400x400/?recliner-chair,furniture",
@@ -209,7 +209,7 @@ export const products = [
     },
     {
         id: 27,
-        name: "Portable Hard Drive",
+        title: "Portable Hard Drive",
         price: 89.99,
         description: "1TB external hard drive for backups.",
         image: "https://source.unsplash.com/400x400/?external-hard-drive,technology",
@@ -217,7 +217,7 @@ export const products = [
     },
     {
         id: 28,
-        name: "Sandals",
+        title: "Sandals",
         price: 29.99,
         description: "Casual sandals for summer wear.",
         image: "https://source.unsplash.com/400x400/?sandals,footwear",
@@ -225,7 +225,7 @@ export const products = [
     },
     {
         id: 29,
-        name: "Beanie Hat",
+        title: "Beanie Hat",
         price: 14.99,
         description: "Warm knit beanie for cold weather.",
         image: "https://source.unsplash.com/400x400/?beanie,hat",
@@ -233,7 +233,7 @@ export const products = [
     },
     {
         id: 30,
-        name: "Table Lamp",
+        title: "Table Lamp",
         price: 45.99,
         description: "Compact lamp with touch controls and USB port.",
         image: "https://source.unsplash.com/400x400/?table-lamp,lamp",
@@ -241,7 +241,7 @@ export const products = [
     },
     {
         id: 31,
-        name: "Bookshelf",
+        title: "Bookshelf",
         price: 109.99,
         description: "Simple wooden bookshelf with 4 shelves.",
         image: "https://source.unsplash.com/400x400/?bookshelf,furniture",
@@ -249,7 +249,7 @@ export const products = [
     },
     {
         id: 32,
-        name: "Noise-Cancelling Headphones",
+        title: "Noise-Cancelling Headphones",
         price: 129.99,
         description: "Over-ear headphones with active noise cancellation.",
         image: "https://source.unsplash.com/400x400/?noise-cancelling-headphones,headphones",

@@ -1,13 +1,53 @@
-import { createContext, useContext, useState } from "react";
-import { products } from "../utils/products";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+// import { products as ProductsDetails } from "../utils/products"; //hardcoded products list
+import CartComponent from "../components/cart";
+import { Box } from "@mui/material";
 
 export const MyContext = createContext();
 
 export const Provider = ({ children }) => {
+  const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [openCart, setOpenCart] = useState(false);
+
+  useEffect(() => {
+    const fetchProductsFromApi = async () => {
+      try {
+        const response = await fetch("https://dummyjson.com/products");
+        const data = await response.json();
+        setProducts(data.products);
+      } catch (err) {
+        console.error("Error fetching products:", err);
+      }
+    };
+    fetchProductsFromApi();
+  }, []);
+
+  const categories = useMemo(() => {
+    return products.reduce(
+      (acc, curr) => {
+        if (!acc.includes(curr.category)) {
+          return [...acc, curr.category];
+        }
+        return acc;
+      },
+      ["all"]
+    );
+  }, [products]);
+
+  const toggleCart = () => {
+    setOpenCart(!openCart);
+  };
 
   const addToCart = (id) => {
-    const newItem = products.find((e) => e.id == id);
+    const newItem = products.some((e) => e.id == id);
     if (!newItem) return;
 
     const newCartItem = {
@@ -67,14 +107,28 @@ export const Provider = ({ children }) => {
     <MyContext.Provider
       value={{
         cart,
+        openCart,
+        products,
+        categories,
         addToCart,
         removeFromCart,
         incrementQuantity,
         decrementQuantity,
         getTotal,
+        toggleCart,
       }}
     >
-      {children}
+      {products.length > 0 ? (
+        children
+      ) : (
+        <Box
+          component="div"
+          className="flex justify-center items-center h-full"
+        >
+          <span className="loader"></span>
+        </Box>
+      )}
+      <CartComponent />
     </MyContext.Provider>
   );
 };

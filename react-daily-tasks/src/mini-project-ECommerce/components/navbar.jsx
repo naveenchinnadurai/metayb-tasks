@@ -16,7 +16,6 @@ import {
   Typography,
 } from "@mui/material";
 import { useEffect, useState } from "react";
-import CartComponent from "../components/cart";
 import { UseProducts } from "../context/productContext";
 
 const Search = styled("div")(({ theme }) => ({
@@ -64,14 +63,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 export default function Navbar({ handleSearchText }) {
-  const { cart } = UseProducts();
+  const { cart, toggleCart } = UseProducts();
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [searchText, setSearchText] = useState("");
-  const [openCart, setOpenCart] = useState(false);
-
-  const toggleCart = () => {
-    setOpenCart(!openCart);
-  };
 
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
@@ -162,7 +156,6 @@ export default function Navbar({ handleSearchText }) {
           </Box>
         </Toolbar>
       </AppBar>
-      <CartComponent open={openCart} onClose={toggleCart} />
     </Box>
   );
 }

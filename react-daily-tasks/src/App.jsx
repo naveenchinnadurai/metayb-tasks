@@ -16,6 +16,7 @@ import Todo from "./pages/todo";
 import ToggleVisibility from "./pages/toggleVisibility";
 import newTheme from "./themes/newTheme";
 import Product from "./mini-project-ECommerce/product";
+import { Provider } from "./mini-project-ECommerce/context/productContext";
 function App() {
   return (
     <div className="h-screen">
@@ -40,7 +41,14 @@ function App() {
         <Route path="/feedback" element={<FeedbackForm />} />
         <Route path="/display-user" element={<DisplayUser />} />
         <Route path="/count-character" element={<CharacterCounter />} />
-        <Route path="/e-commerce" element={<Product />} />
+        <Route
+          path="/e-commerce"
+          element={
+            <Provider>
+              <Product />
+            </Provider>
+          }
+        />
       </Routes>
     </div>
   );
