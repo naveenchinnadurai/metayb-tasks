@@ -1,14 +1,7 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 // import { products as ProductsDetails } from "../utils/products"; //hardcoded products list
-import CartComponent from "../components/cart";
 import { Box } from "@mui/material";
+import CartComponent from "../components/cart";
 
 export const MyContext = createContext();
 
@@ -17,16 +10,20 @@ export const Provider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [openCart, setOpenCart] = useState(false);
 
-  useEffect(() => {
-    const fetchProductsFromApi = async () => {
+  const fetchProductsFromApi = () => {
+    setProducts([]);
+    setTimeout(async () => {
       try {
-        const response = await fetch("https://dummyjson.com/products");
+        const response = await fetch("https://dummyjson.com/products?limit=0");
         const data = await response.json();
         setProducts(data.products);
       } catch (err) {
         console.error("Error fetching products:", err);
       }
-    };
+    }, 500);
+  };
+
+  useEffect(() => {
     fetchProductsFromApi();
   }, []);
 
@@ -116,6 +113,7 @@ export const Provider = ({ children }) => {
         decrementQuantity,
         getTotal,
         toggleCart,
+        fetchProductsFromApi,
       }}
     >
       {products.length > 0 ? (

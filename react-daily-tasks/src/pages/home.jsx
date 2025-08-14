@@ -9,22 +9,22 @@ function Home() {
           <Typography variant="h5" color="white" marginBottom={1}>
             Day 2
           </Typography>
-          <div className="flex justify-center flex-wrap gap-5">
+          <div className="grid grid-cols-3 gap-5">
             <Link
               to="/login"
-              className="bg-slate-800 px-8 py-3 text-white rounded-md w-48 text-center"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md text-center"
             >
               Login Page
             </Link>
             <Link
               to="/products"
-              className="bg-slate-800 px-8 py-3 text-white rounded-md w-48 text-center"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md text-center"
             >
               Products
             </Link>
             <Link
               to="/dashboard"
-              className="bg-slate-800 px-8 py-3 text-white rounded-md w-48 text-center"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md text-center"
             >
               Dashboard
             </Link>
@@ -34,7 +34,7 @@ function Home() {
           <Typography variant="h5" color="white" marginBottom={1}>
             Day 3
           </Typography>
-          <div className="flex  justify-center flex-wrap gap-5">
+          <div className="grid grid-cols-3 gap-5">
             <Link
               to="/count"
               className="bg-slate-800 px-8 py-3 text-white rounded-md w-48 text-center"
@@ -60,16 +60,16 @@ function Home() {
           <Typography variant="h5" color="white" marginBottom={1}>
             Day 4
           </Typography>
-          <div className="flex justify-center flex-wrap gap-5">
+          <div className="grid grid-cols-2 gap-5">
             <Link
               to="/accordion"
-              className="bg-slate-800 px-8 py-3 text-white rounded-md w-72 text-center"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md text-center"
             >
               Accordion
             </Link>
             <Link
               to="/todo"
-              className="bg-slate-800 px-8 py-3 text-white rounded-md w-72 text-center"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md text-center"
             >
               Todo
             </Link>
@@ -79,16 +79,16 @@ function Home() {
           <Typography variant="h5" color="white" marginBottom={1}>
             Day 5
           </Typography>
-          <div className="flex justify-center flex-wrap gap-5">
+          <div className="grid grid-cols-2 gap-5">
             <Link
               to="/Signup"
-              className="bg-slate-800 px-8 py-3 text-white rounded-md w-72 text-center"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md text-center"
             >
               Signup
             </Link>
             <Link
               to="/feedback"
-              className="bg-slate-800 px-8 py-3 text-white rounded-md w-72 text-center"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md text-center"
             >
               Feedback
             </Link>
@@ -98,16 +98,16 @@ function Home() {
           <Typography variant="h5" color="white" marginBottom={1}>
             Day 6
           </Typography>
-          <div className="flex justify-center flex-wrap gap-5">
+          <div className="grid grid-cols-2 gap-5">
             <Link
               to="/display-user"
-              className="bg-slate-800 px-8 py-3 text-white rounded-md w-48 text-center"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md text-center"
             >
               Fetching API
             </Link>
             <Link
               to="/count-character"
-              className="bg-slate-800 px-8 py-3 text-white rounded-md w-72 text-center"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md text-center"
             >
               Count Character and factorial
             </Link>
@@ -117,10 +117,10 @@ function Home() {
           <Typography variant="h5" color="white" marginBottom={1}>
             Day 7
           </Typography>
-          <div className="flex justify-center flex-wrap gap-5">
+          <div className="grid grid-cols-1 gap-5">
             <Link
               to="/e-commerce"
-              className="bg-slate-800 px-8 py-3 text-white rounded-md w-full text-center"
+              className="bg-slate-800 px-8 py-3 text-white rounded-md text-center"
             >
               Mini Project E-Commerce
             </Link>

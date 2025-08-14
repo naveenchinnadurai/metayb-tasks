@@ -84,7 +84,7 @@ export default function Navbar({ handleSearchText }) {
       <AppBar
         position="static"
         sx={{ bgcolor: "#45556c " }}
-        className="bg-sky-950 flex"
+        className="bg-sky-950 flex justify-between"
       >
         <Toolbar>
           <Tooltip title="Open settings">
@@ -95,6 +95,7 @@ export default function Navbar({ handleSearchText }) {
           <Typography
             variant="h6"
             component="div"
+            className="hidden md:flex"
             sx={{ flexGrow: 1, marginLeft: "15px" }}
           >
             Products
@@ -102,7 +103,7 @@ export default function Navbar({ handleSearchText }) {
           <Box
             sx={{ flexGrow: 0 }}
             component="div"
-            className="flex items-center gap-5"
+            className="flex items-center md:gap-5"
           >
             <Search>
               <SearchIconWrapper>

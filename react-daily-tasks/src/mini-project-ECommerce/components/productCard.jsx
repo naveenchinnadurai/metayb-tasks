@@ -18,9 +18,11 @@ import {
   ShoppingBag as GoToCart,
 } from "@mui/icons-material";
 import { UseProducts } from "../context/productContext";
+import { capitalizeFirstLetter } from "../utils/helpers";
 
 function ProductCard({ productInfo, isCartItem = false, quantity = 0 }) {
-  const { id, image, title, price, description, category } = productInfo;
+  const { id, images, title, price, description, category } = productInfo;
+  console.log(images);
   const {
     cart,
     addToCart,
@@ -42,9 +44,9 @@ function ProductCard({ productInfo, isCartItem = false, quantity = 0 }) {
       >
         <CardMedia
           component="img"
-          image={image}
+          image={images[0]}
           alt={title}
-          className="bg-slate-300 h-40"
+          className="bg-slate-100 w-full h-full"
           sx={{ width: "280px" }}
         />
         <CardContent
@@ -96,8 +98,8 @@ function ProductCard({ productInfo, isCartItem = false, quantity = 0 }) {
     <Card component="div" className="flex flex-col justify-evenly">
       <CardMedia
         component="img"
-        className="bg-slate-300 h-40"
-        image={image}
+        className="bg-slate-50  "
+        image={images[0]}
         alt={title}
       />
       <CardContent component="div" className="!py-2 justify-evenly">
@@ -107,7 +109,7 @@ function ProductCard({ productInfo, isCartItem = false, quantity = 0 }) {
           className="bg-slate-200 px-2 w-fit rounded-sm !mb-2"
           mt={1}
         >
-          {category}
+          {capitalizeFirstLetter(category)}
         </Typography>
         <Typography variant="subtitle1" fontWeight={600}>
           {title}
@@ -115,7 +117,7 @@ function ProductCard({ productInfo, isCartItem = false, quantity = 0 }) {
         <Typography variant="body2" color="text.secondary">
           $ {price}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" textAlign="justify">
           {description}
         </Typography>
       </CardContent>
